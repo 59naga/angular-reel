@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="bundle.js"></script>
+  <script src="angular-reel.js"></script>
+</head>
+<body ng-app="ngReel">
+  <header>
+    <h1>ng-reel examples</h1>
+    <p>
+      <a href="/">1</a>
+      <a href="example02.html">2</a>
+      <strong>3</strong>
+    </p>
+  </header>
+
+  <h2>100 users Remember Scroll</h2>
+  <nav ng-reel="Spec3 as users" ng-reel-remember>
+    <a href="#" ng-repeat="user in users track by $index">
+      <figure>
+        <img ng-src="{{user.image}}">
+      </figure>
+      <figcaption>
+        <i ng-bind="user.id"></i>
+        <h2 ng-bind="user.name">loading...</h2>
+        <pre ng-bind="user.bio"></pre>
+      </figcaption>
+    </a>
+  </nav>
+</body>
+</html>

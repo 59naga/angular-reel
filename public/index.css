@@ -1,0 +1,52 @@
+*{margin:0}
+figcaption{margin:0 .5em}
+figcaption h2{margin:0 0 .25em 0}
+h2{font-size:small}
+
+body>div{
+  display:flex;
+}
+body>div>*{
+  flex:1;
+}
+body>header{
+  height:10vh;
+}
+body>header *{
+  display:inline-block;
+}
+body>header a,strong{
+  font-size:xx-large;
+}
+
+body>div nav{
+  position:relative;
+  overflow-y:scroll;
+  height:80vh;
+}
+body>div nav a{
+  width:calc(100% - 2em);
+  padding:2em 1em
+}
+
+a{display:flex;}
+figure{flex:.25}
+figure img{width:100%;height:auto}
+figcaption{flex:2;font-size:xx-small;}
+figcaption pre{word-break:break-word}
+
+a{position:relative}
+figcaption i{
+  font-size:300%;
+  font-style:normal;
+  position:absolute;
+  opacity:.35;
+  right:.5em;
+  bottom:0;
+  display:inline-block;
+  width:3.5em;
+  text-align:right;
+}
+
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.5;transition:opacity .3s linear}

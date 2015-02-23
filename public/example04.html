@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="bundle.js"></script>
+  <script src="angular-reel.js"></script>
+</head>
+<body ng-app="ngReel">
+  <h1>ng-reel is ng-repeat wrapper</h1>
+  <article ng-reel="http://jsonplaceholder.typicode.com/posts as posts" ng-reel-remember>
+    <section ng-repeat="post in posts">
+      <i ng-bind="post.id"></i>
+      <h2 ng-bind="post.title">loading...</h2>
+      <pre ng-bind="post.body"></pre>
+    </section>
+  </article>
+</body>
+</html>

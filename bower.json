@@ -1,0 +1,42 @@
+{
+  "name": "angular-reel",
+  "main": "angular-reel.js",
+  "description": "Infinite scroll like a carousel",
+  "version": "0.0.1",
+
+  "dependencies": {
+    "angular": "~1.3.13",
+    "angular-resource": "~1.3.13"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.9.0"
+  },
+  "overrides": {
+    "coffee-script": {
+      "main": [
+        "extras/coffee-script.js"
+      ]
+    }
+  },
+  
+  "authors": [
+    "59naga <i59naga@icloud.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/59naga/angular-reel",
+  "keywords": [
+    "carousel",
+    "infinite",
+    "scroll",
+    "asynchronous"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/*.js",
+    "*.coffee",
+    "test",
+    "tests"
+  ]
+}

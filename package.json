@@ -1,0 +1,29 @@
+{
+  "name": "angular-reel",
+  "main": "angular-reel.js",
+
+  "scripts": {
+    "build": "coffee -c angular-reel.coffee",
+    "test": "coffee angular-reel.spec.coffee",
+    "pretest": "onefile public/bundle -vD && coffee -o public/ -c angular-reel.coffee"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "main-bower-onefile": "^0.0.12",
+    "faker": "^2.1.2",
+    "json-server": "^0.6.2",
+    "morgan": "^1.5.1",
+    "open": "0.0.5"
+  },
+  "author": "59naga",
+  "license": "MIT",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/59naga/angular-reel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/59naga/angular-reel/issues"
+  },
+  "homepage": "https://github.com/59naga/angular-reel"
+}
