@@ -29,7 +29,7 @@ $ bower install angular-reel
     </section>
   </article>
 </body>
-```html
+```
 
 ## Examples
 ```bash
