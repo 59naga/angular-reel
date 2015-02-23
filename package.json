@@ -5,7 +5,7 @@
   "scripts": {
     "build": "coffee -c angular-reel.coffee",
     "test": "coffee angular-reel.spec.coffee",
-    "pretest": "onefile public/bundle -vD && coffee -o public/ -c angular-reel.coffee"
+    "pretest": "onefile public/bundle -vD && coffee -o public/ -c angular-reel.coffee && coffee -c angular-reel.coffee"
   },
   "devDependencies": {
     "coffee-script": "^1.9.1",
