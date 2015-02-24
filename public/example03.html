@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" href="index.css">
-  <script src="bundle.js"></script>
+  <script src="dependencies.js"></script>
   <script src="angular-reel.js"></script>
 </head>
 <body ng-app="ngReel">
@@ -18,7 +18,7 @@
   </header>
 
   <h2>100 users Remember Scroll</h2>
-  <nav ng-reel="Spec3 as users" ng-reel-remember>
+  <nav ng-reel="third_users as users" ng-reel-remember>
     <a href="#" ng-repeat="user in users track by $index">
       <figure>
         <img ng-src="{{user.image}}">

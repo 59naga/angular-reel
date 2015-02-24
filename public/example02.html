@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" href="index.css">
-  <script src="bundle.js"></script>
+  <script src="dependencies.js"></script>
   <script src="angular-reel.js"></script>
 </head>
 <body ng-app="ngReel">
@@ -18,7 +18,7 @@
   </header>
 
   <h2>1 user noAutoplay</h2>
-  <nav ng-reel="http://localhost:3000/alone as users">
+  <nav ng-reel="http://localhost:3000/alone as users" ng-reel-overflow style="height:500px;overflow:scroll">
     <a href="#" ng-repeat="user in users track by $index">
       <figure>
         <img ng-src="{{user.image}}">

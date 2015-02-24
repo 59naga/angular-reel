@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Required $ gulp server</title>
   <link rel="stylesheet" href="index.css">
-  <script src="bundle.js"></script>
+  <script src="dependencies.js"></script>
   <script src="angular-reel.js"></script>
 </head>
 <body ng-app="ngReel">
@@ -20,7 +20,7 @@
   <div>
     <section>
       <h2>1 user</h2>
-      <nav ng-reel="Spec0 as users" ng-reel-overflow ng-reel-auto>
+      <nav ng-reel="alone as users" ng-reel-overflow ng-reel-auto>
         <a href="#" ng-repeat="user in users track by $index">
           <figure>
             <img ng-src="{{user.image}}">
@@ -36,7 +36,7 @@
 
     <section>
       <h2>5 users</h2>
-      <nav ng-reel="Spec1 as users" ng-reel-overflow ng-reel-auto>
+      <nav ng-reel="first_users as users" ng-reel-overflow ng-reel-auto>
         <a href="#" ng-repeat="user in users track by $index">
           <figure>
             <img ng-src="{{user.image}}">
@@ -52,7 +52,7 @@
     
     <section>
       <h2>10 users</h2>
-      <nav ng-reel="Spec2 as users" ng-reel-overflow ng-reel-auto>
+      <nav ng-reel="second_users as users" ng-reel-overflow ng-reel-auto>
         <a href="#" ng-repeat="user in users track by $index">
           <figure>
             <img ng-src="{{user.image}}">
@@ -68,7 +68,7 @@
   
     <section>
       <h2>100 users</h2>
-      <nav ng-reel="Spec3 as users" ng-reel-overflow ng-reel-auto>
+      <nav ng-reel="third_users as users" ng-reel-overflow ng-reel-auto>
         <a href="#" ng-repeat="user in users track by $index">
           <figure>
             <img ng-src="{{user.image}}">
