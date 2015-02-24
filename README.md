@@ -27,7 +27,7 @@ $ bower install angular-reel
 ```
 
 ## ng-reel
-$http.get(`URL`) to posts
+Append to `posts` by Request `URL`
 ```html
 <nav ng-reel="URL as posts">
   <a ng-repeat="post in posts">
