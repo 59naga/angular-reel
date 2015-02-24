@@ -1,4 +1,4 @@
-Factory= ($reel,$http)->
+Factory= ($reel,$http,$window)->
   class Reel
     constructor:(@scope,element,@attrs)->
       @element= element[0]
@@ -15,7 +15,7 @@ Factory= ($reel,$http)->
       setTimeout =>
         @response()
 
-        scroller= window
+        scroller= $window
         scroller= @element if @attrs.ngReelOverflow?
         scroller.addEventListener 'scroll',=>
           @response()
@@ -86,7 +86,7 @@ Factory= ($reel,$http)->
       if @attrs.ngReelOverflow?
         @element.scrollTop+= y
       else
-        window.scrollBy 0,y
+        $window.scrollBy 0,y
 
     getName: -> "ngReel:#{@attrs.ngReel}"
     remember: (value)->
@@ -103,7 +103,7 @@ Factory= ($reel,$http)->
       if @attrs.ngReelOverflow?
         scrollY= @element.scrollTop 
       else
-        scrollY= window.scrollY-@element.offsetTop
+        scrollY= $window.scrollY-@element.offsetTop
 
       isScrollAfter= feeds.height< scrollY
 
@@ -111,7 +111,7 @@ Factory= ($reel,$http)->
       if @attrs.ngReelOverflow?
         isEndOfScroll= @element.scrollHeight <= @element.scrollTop+@element.offsetHeight 
       else
-        isEndOfScroll= window.document.body.offsetHeight <= window.scrollY+window.innerHeight
+        isEndOfScroll= $window.document.body.offsetHeight <= $window.scrollY+$window.innerHeight
       isEndOfScroll
 
 module.exports= Factory

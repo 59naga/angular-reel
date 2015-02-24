@@ -2,7 +2,7 @@
   "name": "angular-reel",
   "main": "angular-reel.js",
   "description": "Infinite scroll for ng-repeat",
-  "version": "0.0.2",
+  "version": "0.0.3",
 
   "dependencies": {
     "angular": "~1.3.13"

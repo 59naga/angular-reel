@@ -6,7 +6,7 @@ Infinite scroll for ng-repeat
 $ bower install angular-reel
 ```
 
-## Usage
+### Usage
 ```html
 <head>
   <script src="bower_components/angular/angular.js"></script>
@@ -27,6 +27,7 @@ $ bower install angular-reel
 ```
 
 ## ng-reel
+$http.get(`URL`) to posts
 ```html
 <nav ng-reel="URL as posts">
   <a ng-repeat="post in posts">
@@ -55,6 +56,13 @@ Remember scroll position by use $window.localStorage.setItem(`"URL as posts"`)
 ```
 ### ng-reel-auto
 Auto scroll by use $window.requestAnimationFrame
+```html
+<nav ng-reel="URL as posts" ng-reel-auto>
+  <a ng-repeat="post in posts">
+    {{post.body}}
+  </a>
+</nav>
+```
 
 ## $reelProvider
 ### getParams
@@ -67,6 +75,7 @@ module.config(function($reelProvider){
       _start:Reel.begin,
       _end:Reel.end,
     };
+    // becomes "URL?_start=Reel.begin&_end=Reel.begin"
   });
 });
 ```

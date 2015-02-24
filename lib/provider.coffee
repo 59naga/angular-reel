@@ -6,9 +6,9 @@ Provider= ->
 
   getParams: (config)-> getParams= config
   disableZeroMargin: -> enableZeroMargin= false
-  $get: ->
+  $get: ($window)->
     if enableZeroMargin
-      window.angular.element(document).find('head').append '''
+      $window.angular.element(document).find('head').append '''
       <style type="text/css">
         @charset "UTF-8";
         [ng-reel],[ng-reel] *{margin:0;}
@@ -17,10 +17,10 @@ Provider= ->
 
     getParams:getParams
     autoScroll: (Reel)->
-      window.requestAnimationFrame -> nextFrame()
+      $window.requestAnimationFrame -> nextFrame()
       nextFrame= =>
         Reel.scroll()
 
-        window.requestAnimationFrame nextFrame
+        $window.requestAnimationFrame nextFrame
 
 module.exports= Provider
