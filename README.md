@@ -94,8 +94,8 @@ $ npm test
 ```
 
 ## Feture
-**DEMO**
-**TEST**
+* **DEMO**
+* **TEST**
 
 # License
 MIT by 59naga
