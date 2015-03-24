@@ -63,6 +63,15 @@ Auto scroll by use $window.requestAnimationFrame
   </a>
 </nav>
 ```
+### ng-reel-stack
+Doesn't remove elements, And doesn't reset page number.
+```html
+<nav ng-reel="URL as posts" ng-reel-stack>
+  <a ng-repeat="post in posts">
+    {{post.body}}
+  </a>
+</nav>
+```
 
 ## $reelProvider
 ### getParams

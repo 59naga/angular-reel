@@ -12,14 +12,14 @@
     <h1>ng-reel examples</h1>
     <p>
       <a href="/">1</a>
-      <strong>2</strong>
+      <a href="example02.html">2</a>
       <a href="example03.html">3</a>
-      <a href="example04.html">4</a>
+      <strong>4</strong>
     </p>
   </header>
 
-  <h2>1 user noAutoplay</h2>
-  <nav ng-reel="http://localhost:3000/alone as users" ng-reel-overflow style="height:500px;overflow:scroll">
+  <h2>100 users Stack Scroll</h2>
+  <nav ng-reel="third_users as users" ng-reel-stack>
     <a href="#" ng-repeat="user in users track by $index">
       <figure>
         <img ng-src="{{user.image}}">

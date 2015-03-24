@@ -2,17 +2,17 @@
   "name": "angular-reel",
   "main": "angular-reel.js",
   "description": "Infinite scroll for ng-repeat",
-  "version": "0.0.3",
+  "version": "0.0.4",
 
   "scripts": {
     "build": "gulp release",
     
     "test": "gulp",
-    "pretest": "npm i && bower i && onefile public/dependencies -vD"
+    "pretest": "npm i && bower i && onefile --json --output public/dependencies"
   },
   "devDependencies": {
     "coffee-script": "^1.9.1",
-    "main-bower-onefile": "^0.0.12",
+    "onefile": "^0.2.8",
     "faker": "^2.1.2",
     "json-server": "^0.6.2",
     "morgan": "^1.5.1",

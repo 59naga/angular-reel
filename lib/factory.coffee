@@ -23,6 +23,13 @@ Factory= ($reel,$http,$window)->
     response: ->
       return if @busy?
 
+      if @attrs.ngReelStack?
+        if @isEndOfScroll()
+          @request (data)=>
+            @add data
+            @response()
+        return
+
       feeds= @get @feed
       if @isScrollAfter feeds
         @request (data)=> 
@@ -47,6 +54,7 @@ Factory= ($reel,$http,$window)->
       .success (feeds)=>
         if feeds.length is 0
           throw new Error 'resource Not found' if @begin is 0
+          return if @attrs.ngReelStack?
 
           @begin= 0
           @end= @feed
