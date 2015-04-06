@@ -1,14 +1,11 @@
 {
   "name": "angular-reel",
-  "main": "angular-reel.js",
-  "description": "Infinite scroll for ng-repeat",
-  "version": "0.0.4",
-
   "scripts": {
-    "build": "gulp release",
-    
+    "build": "browserify angular-reel.coffee -t coffeeify --extension .coffee --no-bundle-external | ng-annotate - --add > public/angular-reel.js",
+    "postbuild": "uglifyjs public/angular-reel.js --compres --mangle --source-map public/angular-reel.min.js.map --source-map-url angular-reel.min.js.map --output public/angular-reel.min.js",
+
     "test": "gulp",
-    "pretest": "npm i && bower i && onefile --json --output public/dependencies"
+    "pretest": "npm i && bower i && onefile --json --output public/dependencies && npm run build"
   },
   "devDependencies": {
     "coffee-script": "^1.9.1",
@@ -19,19 +16,8 @@
     "open": "0.0.5",
     "browserify": "^9.0.3",
     "coffeeify": "^1.0.0",
+    "ng-annotate": "^0.15.4",
     "gulp": "^3.8.11",
-    "gulp-watch": "^4.1.1",
-    "vinyl-source-stream": "^1.0.0"
-  },
-  
-  "author": "59naga",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/59naga/angular-reel.git"
-  },
-  "bugs": {
-    "url": "https://github.com/59naga/angular-reel/issues"
-  },
-  "homepage": "https://github.com/59naga/angular-reel"
+    "uglify-js": "^2.4.19"
+  }
 }

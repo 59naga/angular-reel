@@ -1,38 +1,5 @@
 gulp= require 'gulp'
-gulp.task 'default',['build'],->
-  gulp.start 'server'
-
-  gulp.watch [
-    '*.coffee'
-    'lib/*.coffee'
-  ],->
-    gulp.start 'build'
-
-gulp.task 'release',->
-  source= require 'vinyl-source-stream'
-  browserify= require 'browserify'
-  browserify
-      entries: "./angular-reel.coffee"
-      extensions: '.coffee'
-    .transform 'coffeeify'
-    .bundle()
-    .pipe source 'angular-reel.js'
-    .pipe gulp.dest './'
-gulp.task 'build',->
-  source= require 'vinyl-source-stream'
-  browserify= require 'browserify'
-  browserify
-      entries: "./angular-reel.coffee"
-      extensions: '.coffee'
-    .transform 'coffeeify'
-    .bundle()
-    .pipe source 'angular-reel.js'
-    .pipe gulp.dest './public'
-
-gulp.task 'open',['default'],->
-  open= require 'open'
-  open 'http://localhost:3000'
-gulp.task 'server',->
+gulp.task 'default',->
   process.nextTick ->
     jsonServer= require 'json-server'
     morgan= require 'morgan'
